@@ -147,7 +147,7 @@ public class JFrameAPI extends javax.swing.JFrame {
         this.setTitle("Prueba API: Elaborando Información");
         //Primero necesito un constructor de contextos para poder pasarlos los parámetros a la API
         GeoApiContext context = new GeoApiContext.Builder()
-            .apiKey("AIza....").maxRetries(3)
+            .apiKey("AIzaSyBzMykFGPuNJu8L2kq3wm0MNErDZkzjbZ4").maxRetries(3)
             .build();
         
         try{
@@ -162,6 +162,8 @@ public class JFrameAPI extends javax.swing.JFrame {
                 //Revisar la dirección que nos retornó la API
                 latitud = Double.parseDouble(gson.toJson(results[0].geometry.location.lat));
                 longitud = Double.parseDouble(gson.toJson(results[0].geometry.location.lng));
+                this.spinnerLatitud.setValue(latitud);
+                this.spinnerLongitud.setValue(longitud);
             }
             else{
                 latitud = (Double)this.spinnerLatitud.getValue();
