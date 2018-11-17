@@ -168,6 +168,10 @@ public class JFrameAPI extends javax.swing.JFrame {
             else{
                 latitud = (Double)this.spinnerLatitud.getValue();
                 longitud = (Double)this.spinnerLongitud.getValue();
+                GeocodingResult[] results = GeocodingApi.reverseGeocode(context,
+                        new LatLng(latitud, longitud)).await();
+                Gson gson = new GsonBuilder().setPrettyPrinting().create();
+                this.textFieldDireccion.setText(gson.toJson(results[0].formattedAddress));
             }
             
             //Ahora a intentar colocar la imagen, será del tamaño del label de la imagen
