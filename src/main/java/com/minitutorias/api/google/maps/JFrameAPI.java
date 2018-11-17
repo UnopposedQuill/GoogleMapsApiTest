@@ -181,7 +181,7 @@ public class JFrameAPI extends javax.swing.JFrame {
             Markers markers = new Markers();
             //tamaño pequeño
             markers.size(Markers.MarkersSize.small);
-            //color azul
+            //color rojo
             markers.color("red");
             //el sitio del marcador, se pueden agregar varios sitios
             markers.addLocation(latLng);
