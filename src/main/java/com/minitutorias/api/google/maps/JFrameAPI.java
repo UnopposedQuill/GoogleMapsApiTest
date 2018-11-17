@@ -147,7 +147,7 @@ public class JFrameAPI extends javax.swing.JFrame {
         this.setTitle("Prueba API: Elaborando Información");
         //Primero necesito un constructor de contextos para poder pasarlos los parámetros a la API
         GeoApiContext context = new GeoApiContext.Builder()
-            .apiKey("AIzaSyBzMykFGPuNJu8L2kq3wm0MNErDZkzjbZ4").maxRetries(3)
+            .apiKey("AIza....").maxRetries(3)
             .build();
         
         try{
