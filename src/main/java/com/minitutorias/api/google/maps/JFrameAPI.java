@@ -84,7 +84,7 @@ public class JFrameAPI extends javax.swing.JFrame {
 
         jLabel4.setText("Zoom");
 
-        spinnerZoom.setModel(new javax.swing.SpinnerNumberModel(1, 1, 20, 1));
+        spinnerZoom.setModel(new javax.swing.SpinnerNumberModel(15, 1, 20, 1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
